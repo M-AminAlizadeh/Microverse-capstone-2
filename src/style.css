@@ -1,7 +1,32 @@
 body {
-  background-color: bisque;
+  padding: 0;
+  margin: 0;
 }
 
-.hello {
-  color: red;
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.content {
+  padding: 30px 10px;
+}
+
+.content div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 32%;
+  padding: 20px 10px;
+  align-items: center;
+  background-color: #efefef;
+}
+
+.footer {
+  border: 1px solid #000;
 }
