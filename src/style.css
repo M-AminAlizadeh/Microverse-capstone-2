@@ -27,6 +27,7 @@ ul li {
   background-color: #efefef;
 }
 
-.footer {
+.my-footer {
+  padding: 10px 35px;
   border: 1px solid #000;
 }
