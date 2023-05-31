@@ -1,0 +1,3 @@
+We will use the second api which About Movies and TV
+here is the base usrl for the api
+https://api.tvmaze.com/seasons/1/episodes
