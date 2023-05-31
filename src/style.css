@@ -36,12 +36,26 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
+}
+
+.content .item-from-api .item-name > span {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .content .item-from-api .number-of-likes {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  width: 70%;
+}
+
+.content .item-from-api button {
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .footer {
