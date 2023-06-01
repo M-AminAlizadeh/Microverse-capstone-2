@@ -1,11 +1,10 @@
 /* eslint-disable*/
-import getAppId from './modules/appId.js';
 import displayItems from './modules/displayItems.js';
 import likeCounter from './modules/likecounter.js';
 
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-const appID = localStorage.getItem('appID') || undefined;
+const appID = "jaJOjRHkpx0OWU0XZB3g";
 
 // Display items
 displayItems(baseURL);
@@ -37,9 +36,6 @@ document.addEventListener('click', async (e) => {
     });
   }
 });
-getAppId(involvementURL);
-// App ID
-if (!appID) {
-  // getAppId(involvementURL, appID);
-}
+
+// Like Counter
 likeCounter(`${involvementURL}${appID}/likes`);
