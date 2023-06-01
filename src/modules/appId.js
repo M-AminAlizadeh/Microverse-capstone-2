@@ -1,4 +1,4 @@
-const getAppId = async (invoUrl, appID) => {
+const getAppId = async (invoUrl) => {
   const res = await fetch(invoUrl, {
     method: 'POST',
     headers: {
@@ -10,10 +10,9 @@ const getAppId = async (invoUrl, appID) => {
   });
 
   const data = res.json();
-  console.log(data);
-  appID = data;
+  // appID = data;
   // Save to localstorage
   localStorage.setItem('appID', data);
 };
 
-export { getAppId };
+export default getAppId;
