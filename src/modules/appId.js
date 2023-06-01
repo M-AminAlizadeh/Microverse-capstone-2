@@ -1,4 +1,4 @@
-const getAppId = async (invoUrl) => {
+const getAppId = async (invoUrl, appID) => {
   const res = await fetch(invoUrl, {
     method: 'POST',
     headers: {
