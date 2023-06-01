@@ -89,22 +89,53 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal">
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-body">
+            <!-- Snapshoot -->
+            <img class="modal-snapshoot w-100" src="" alt="" />
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">##</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Initial Date -->
+                <tr>
+                  <th scope="row">Initial Release Date</th>
+                  <td class="modal-initial-date"></td>
+                </tr>
+                <!-- Rating -->
+                <tr>
+                  <th scope="row">Rating</th>
+                  <td class="modal-rating"></td>
+                </tr>
+                <!-- Season Number -->
+                <tr>
+                  <th scope="row">Season Number</th>
+                  <td class="modal-season-number"></td>
+                </tr>
+                <!-- Summary -->
+                <tr>
+                  <th scope="row">Summary</th>
+                  <td class="modal-summary"></td>
+                </tr>
+                <!-- Link -->
+                <tr>
+                  <th scope="row">Website Link</th>
+                  <td class="modal-website-link"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
