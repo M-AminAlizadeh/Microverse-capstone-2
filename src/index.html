@@ -3,13 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="https://img.icons8.com/ios/50/film-reel--v1.png" />
     <!-- Bootstrap Css CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <title>Movies & TV Shows -- Javascript Capston Project</title>
   </head>
   <body>
@@ -19,7 +27,11 @@
       <nav class="container navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img width="80" height="80" src="https://img.icons8.com/dotty/80/cinema-.png" alt="cinema-"/>
+            <img
+              width="40"
+              height="40"
+              src="https://img.icons8.com/dotty/80/cinema-.png"
+              alt="cinema-" />
           </a>
           <button
             class="navbar-toggler"
@@ -54,12 +66,75 @@
       </nav>
     </header>
     <!-- content section -->
-    <div class="content w-100 row">
-    </div>
+    <main
+      class="mx-auto my-5 pt-5 px-5 d-flex flex-wrap justify-content-between gap-3"></main>
     <!-- Footer -->
-    <footer class="bg-light fixed-bottom my-footer">
-      Created by Microneunt Gergito & Amin
+    <footer
+      class="bg-primary fixed-bottom text-light py-2 px-3 d-flex justify-content-center align-items-center">
+      Created with ❤ by Gergito & Amin for more info checkout this
+      <a href="https://github.com/M-AminAlizadeh/Microverse-capstone-2" class="link-dark ms-2 fw-bold fs-5">Link</a>
     </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="e"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Snapshoot -->
+            <img class="modal-snapshoot w-100" src="" alt="" />
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">##</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Initial Date -->
+                <tr>
+                  <th scope="row">Initial Release Date</th>
+                  <td class="modal-initial-date"></td>
+                </tr>
+                <!-- Rating -->
+                <tr>
+                  <th scope="row">Rating</th>
+                  <td class="modal-rating"></td>
+                </tr>
+                <!-- Season Number -->
+                <tr>
+                  <th scope="row">Season Number</th>
+                  <td class="modal-season-number"></td>
+                </tr>
+                <!-- Summary -->
+                <tr>
+                  <th scope="row">Summary</th>
+                  <td class="modal-summary"></td>
+                </tr>
+                <!-- Link -->
+                <tr>
+                  <th scope="row">Website Link</th>
+                  <td class="modal-website-link"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap JS CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
