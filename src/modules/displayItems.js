@@ -1,6 +1,5 @@
-// import itemsCounter from './itemcounter.js';
-const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
-
+// eslint-disable-next-line
+import itemsCounter from './itemcounter.js';
 const mainContent = document.querySelector('main');
 
 // Showing Items
@@ -8,10 +7,10 @@ const displayItems = async (baseURL, item, allLikes) => {
   mainContent.innerHTML = '';
   let content = '';
   // items.forEach((item, index) => {
-  for (let i = 0; i < 32; i++) {
+  for (let i = 0; i < 13; i += 1) {
     const mealLikes = allLikes.find((like) => like.item_id === (item[i].id).toString());
     if (i < 29) {
-      content += `
+      content += `s
       <!-- Card -->
         <div class="card" style="width: 20rem" id="${item[i].id}">
           <!-- Snapshoot -->
@@ -43,18 +42,17 @@ const displayItems = async (baseURL, item, allLikes) => {
           <!-- Buttons -->
           <div class="card-body d-flex justify-content-between">
             <button type="button" class="btn btn-info text-light comment-btn" data-bs-toggle="modal" width="2rem" height="2rem" id="${
-    item[i].id
-  }" data-bs-target="#e">Comments</button>
-            <button type="button" class="btn btn-secondary" id="${
-    item[i].id
-  }">Reservation</button>
+  item[i].id
+}" data-bs-target="#e">Comments</button>
+            <button type="button" class="btn btn-secondary" id="${item[i].id
+}">Reservation</button>
           </div>
         </div>
       `;
     }
   }
   mainContent.innerHTML = content;
-  // itemsCounter(mainContent);
+  itemsCounter(mainContent);
   return item;
 };
 

@@ -7,9 +7,7 @@ const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/c
 
 const itemLists = await allItems(baseURL);
 const likelist = await getLike(involvementURL);
-console.log(itemLists);
-console.log(likelist);
-// Display items
+
 displayItems(baseURL, itemLists, likelist);
 addLikesListenerButtons();
 
