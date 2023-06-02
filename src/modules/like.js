@@ -1,4 +1,4 @@
-const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/likes';
 
 const postLike = async (invoUrl, itemId) => {
   const res = await fetch(`${invoUrl}likes`, {
