@@ -1,10 +1,15 @@
 import displayItems from './modules/displayItems.js';
 import getComments from './modules/comment.js';
+import { getLike, allItems, addLikesListenerButtons } from './modules/like.js';
 
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
-// Display items
-displayItems(baseURL);
+
+const itemLists = await allItems(baseURL);
+const likelist = await getLike(involvementURL);
+
+displayItems(baseURL, itemLists, likelist);
+addLikesListenerButtons();
 
 getComments(involvementURL, 1);
 // Comment Popup
@@ -22,7 +27,7 @@ document.addEventListener('click', async (e) => {
   let id;
   if (e.target.classList.contains('comment-btn')) {
     id = e.target.id;
-    const items = await displayItems(baseURL);
+    const items = await displayItems(baseURL, itemLists, likelist);
     const comments = await getComments(involvementURL, id);
     modalCommentsContainer.innerHTML = '';
     items.forEach((item) => {
