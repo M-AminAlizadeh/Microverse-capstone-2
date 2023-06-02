@@ -25,15 +25,15 @@ const displayItems = async (baseURL, item, allLikes) => {
             class="card-body d-flex justify-content-between align-items-center">
             <h4 class="card-title text-capitalize"> ${item[i].name} </h4>
             <!-- unlike icon-->
-            <div class="like-container d-flex flex-column align-items-center">
+            <div class="like-container d-flex flex-column align-items-center">            
+              <a href = "" class = "like-btn" id = "${item[i].id}">
                 <img
                   width="30"
                   height="30"
-                  id="${item[i].id}"
                   src="https://img.icons8.com/ios/50/like--v1.png"
-                  alt="unlike icon" 
-                  class="like-btn" />
-              <span class="me-2">${mealLikes ? mealLikes.likes : 0}</span>Likes
+                  alt="unlike icon" />
+              </a>
+              <span class="me-2">${mealLikes ? mealLikes.likes : 0} Likes</span>
               <!-- src="https://img.icons8.com/ios-filled/50/FA5252/like--v1.png" -->
             </div>
           </div>

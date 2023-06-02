@@ -1,6 +1,6 @@
 import displayItems from './modules/displayItems.js';
 import getComments from './modules/comment.js';
-import { postLike, getLike, allItems } from './modules/like.js';
+import { getLike, allItems, addLikesListenerButtons } from './modules/like.js';
 
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
@@ -11,6 +11,7 @@ console.log(itemLists);
 console.log(likelist);
 // Display items
 displayItems(baseURL, itemLists, likelist);
+addLikesListenerButtons();
 
 getComments(involvementURL, 1);
 // Comment Popup
