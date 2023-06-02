@@ -1,14 +1,11 @@
-/* eslint-disable*/
 import displayItems from './modules/displayItems.js';
-import { allLike, allItems } from './modules/likecounter.js';
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/likes';
-const appID = "UKP27MmenkdUVvm9H93H";
+const involvementURL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 // Display items
-const likeArray = await allLike(involvementURL);
-const itemArray = await allItems(baseURL);
-displayItems(itemArray, likeArray);
+displayItems(baseURL);
+
 
 // Comment Popup
 const modalTitle = document.querySelector('.modal-title');
@@ -23,6 +20,7 @@ document.addEventListener('click', async (e) => {
   if (e.target.classList.contains('comment-btn')) {
     id = e.target.id;
     const items = await displayItems(baseURL);
+    console.log(items);
     items.forEach((item) => {
       if (item.id === Number(id)) {
         modalTitle.innerHTML = item.name;
@@ -37,5 +35,5 @@ document.addEventListener('click', async (e) => {
     });
   }
 });
-// Like Counter
-// likeCounter(`${involvementURL}${appID}/likes`);
+
+export { involvementURL };
