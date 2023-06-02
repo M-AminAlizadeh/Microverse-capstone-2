@@ -9,7 +9,7 @@ const postLike = async (invoUrl, itemId) => {
     }),
   });
   const data = await res.json();
-  console.log(data);
+  return data;
 };
 
 const getLike = async (invoUrl) => {

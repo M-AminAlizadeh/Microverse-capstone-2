@@ -1,8 +1,8 @@
 import displayItems from './modules/displayItems.js';
 import getComments from './modules/comment.js';
+
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 // Display items
 displayItems(baseURL);
 
@@ -37,7 +37,7 @@ document.addEventListener('click', async (e) => {
         modalSummary.innerHTML = `${item.summary.slice(0, 40)}....`;
         modalWebsiteLink.innerHTML = `<a href=${item.url} target="_blank">Click here</a>`;
         // comment
-        modalCommentsCount = comments.length;
+        modalCommentsCount.innerHTML = comments.length;
         comments.forEach((comment) => {
           commentContent += `
           <!-- Comment -->
@@ -53,4 +53,4 @@ document.addEventListener('click', async (e) => {
   }
 });
 
-export { involvementURL };
+export default involvementURL;

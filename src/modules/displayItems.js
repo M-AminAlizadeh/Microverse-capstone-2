@@ -1,6 +1,6 @@
 import { postLike, getLike } from './like.js';
-const involvementURL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+
+const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 const mainContent = document.querySelector('main');
 
@@ -33,8 +33,8 @@ const displayItems = async (baseURL) => {
                 alt="unlike icon" 
                 class="like-btn" />
             <p class="card-text"><span class="me-2" id='likes-${
-              item.id
-            }'></span>Likes</p>
+  item.id
+}'></span>Likes</p>
             <!-- src="https://img.icons8.com/ios-filled/50/FA5252/like--v1.png" -->
           </div>
         </div>
@@ -45,11 +45,11 @@ const displayItems = async (baseURL) => {
         <!-- Buttons -->
         <div class="card-body d-flex justify-content-between">
           <button type="button" class="btn btn-info text-light comment-btn" data-bs-toggle="modal" width="2rem" height="2rem" id="${
-            item.id
-          }" data-bs-target="#e">Comments</button>
+  item.id
+}" data-bs-target="#e">Comments</button>
           <button type="button" class="btn btn-secondary" id="${
-            item.id
-          }">Reservation</button>
+  item.id
+}">Reservation</button>
         </div>
       </div>
     `;
@@ -64,7 +64,7 @@ const showLikesCount = async (invoUrl) => {
   likesData.forEach((eachItemData) => {
     const likesCount = [`${eachItemData.likes}`];
     const likesCountElement = document.getElementById(
-      `likes-${eachItemData.item_id}`
+      `likes-${eachItemData.item_id}`,
     );
     if (likesCountElement) {
       likesCountElement.innerHTML = likesCount;
