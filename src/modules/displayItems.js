@@ -60,7 +60,7 @@ const displayItems = async (baseURL) => {
 
 // Showing likes count
 const showLikesCount = async (invoUrl) => {
-  const likesData = getLike(invoUrl);
+  const likesData = await getLike(invoUrl);
   likesData.forEach((eachItemData) => {
     const likesCount = [`${eachItemData.likes}`];
     const likesCountElement = document.getElementById(
