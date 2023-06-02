@@ -47,8 +47,8 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
-                  >Movies and TV shows</a
-                >
+                  >Movies and TV shows (<span id="items-count"></span> Movies) </a>
+                
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
@@ -72,7 +72,11 @@
     <footer
       class="bg-primary fixed-bottom text-light py-2 px-3 d-flex justify-content-center align-items-center">
       Created with ❤ by Gergito & Amin for more info checkout this
-      <a href="https://github.com/M-AminAlizadeh/Microverse-capstone-2" class="link-dark ms-2 fw-bold fs-5">Link</a>
+      <a
+        href="https://github.com/M-AminAlizadeh/Microverse-capstone-2"
+        class="link-dark ms-2 fw-bold fs-5"
+        >Link</a
+      >
     </footer>
     <!-- Modal -->
     <div
@@ -94,8 +98,7 @@
           <div class="modal-body">
             <!-- Snapshoot -->
             <img class="modal-snapshoot w-100" src="" alt="" />
-          </div>
-          <div class="modal-body">
+            <!-- Details -->
             <table class="table">
               <thead>
                 <tr>
@@ -131,6 +134,13 @@
                 </tr>
               </tbody>
             </table>
+            <!-- Comments -->
+            <h3 class="text-center">
+              Comments(<span class="comments-counter">3</span>)
+            </h3>
+            <div
+              class="comments-container mt-3 d-flex flex-column justify-content-center align-items-center"></div>
+            <!-- Comment form -->
           </div>
         </div>
       </div>
