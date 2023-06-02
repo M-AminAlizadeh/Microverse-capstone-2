@@ -1,5 +1,4 @@
-import { postLike, getLike } from './like.js';
-
+// import itemsCounter from './itemcounter.js';
 const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 const mainContent = document.querySelector('main');
@@ -55,6 +54,7 @@ const displayItems = async (baseURL, item, allLikes) => {
     }
   }
   mainContent.innerHTML = content;
+  // itemsCounter(mainContent);
   return item;
 };
 
