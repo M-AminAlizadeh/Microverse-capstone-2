@@ -18,4 +18,11 @@ const getLike = async (invoUrl) => {
   return data;
 };
 
-export { postLike, getLike };
+const allItems = async (baseURL) => {
+  const res = await fetch(baseURL);
+  const data = await res.json();
+  return data;
+};
+
+
+export { postLike, getLike, allItems };
