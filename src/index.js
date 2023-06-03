@@ -1,15 +1,20 @@
-import displayItems from './modules/displayItems.js';
+// Imports
+import { displayItems } from './modules/displayItems.js';
+import itemsCounter from './modules/itemCounter.js';
+import likeEventListner from './modules/likeEventListener.js';
 import { getComments, sendComment } from './modules/comment.js';
-import { getLike, allItems, addLikesListenerButtons } from './modules/like.js';
 
+// Global variables
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
-const itemLists = await allItems(baseURL);
-const likelist = await getLike(involvementURL);
+// const likelist = await getLike(involvementURL);
 
-displayItems(baseURL, itemLists, likelist);
-addLikesListenerButtons();
+// Display items
+displayItems(baseURL, involvementURL);
+// Items counter
+itemsCounter(baseURL);
 
 getComments(involvementURL, 1);
 // Comment Popup
@@ -28,7 +33,7 @@ document.addEventListener('click', async (e) => {
   let id;
   if (e.target.classList.contains('comment-btn')) {
     id = e.target.id;
-    const items = await displayItems(baseURL, itemLists, likelist);
+    const items = await displayItems(baseURL, involvementURL);
     const comments = await getComments(involvementURL, id);
     modalCommentsContainer.innerHTML = '';
     items.forEach((item) => {
@@ -57,12 +62,10 @@ document.addEventListener('click', async (e) => {
         // comment form
       }
     });
-    modalCommentBtn.addEventListener('click', (e) => {
+    modalCommentBtn.addEventListener('click', async (e) => {
       e.preventDefault();
-      sendComment(involvementURL, id);
-      getComments(involvementURL, id);
+      await sendComment(involvementURL, id);
+      await getComments(involvementURL, id);
     });
   }
 });
-
-export default involvementURL;

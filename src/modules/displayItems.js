@@ -1,7 +1,9 @@
 import fetchItems from './fetchItems.js';
+import displayLikesCount from './displayLikesCount.js';
+import postLike from './postLike.js';
 
-// Display items
-const displayItems = async (baseUrl) => {
+// Display items and their likes count
+const displayItems = async (baseUrl, invoUrl) => {
   const items = await fetchItems(baseUrl);
   const itemsContainer = document.querySelector('main');
   // Reset it
@@ -22,14 +24,17 @@ const displayItems = async (baseUrl) => {
               <h4 class="card-title text-capitalize"> ${item.name} </h4>
               <!-- unlike icon-->
               <div class="like-container d-flex flex-column align-items-center">
-                <a href = "" class = "like-btn" id = "${item.id}">
                   <img
                     width="30"
                     height="30"
                     src="https://img.icons8.com/ios/50/like--v1.png"
-                    alt="unlike icon" />
-                </a>
-                <span class="me-2">232 Likes</span>
+                    alt="unlike icon"
+                    id = "${item.id}" 
+                    class="like-icon"/>
+                <p class="me-2"> 
+                  <span id="likes-${item.id}"></span>
+                  Likes
+                </p>
                 <!-- src="https://img.icons8.com/ios-filled/50/FA5252/like--v1.png" -->
               </div>
             </div>
@@ -51,43 +56,18 @@ const displayItems = async (baseUrl) => {
   });
   // Assign it
   itemsContainer.innerHTML = content;
+  // Show likes count
+  displayLikesCount(invoUrl);
+  // Like button event
+  const likeBtns = document.querySelectorAll('.like-icon');
+
+  likeBtns.forEach((likeBtn) => {
+    likeBtn.addEventListener('click', async (e) => {
+      postLike(invoUrl, e.target.id);
+      displayLikesCount(invoUrl);
+    });
+  });
+  return items;
 };
 
 export { displayItems };
-// import itemsCounter from './itemcounter.js';
-
-// // Showing Items
-// const displayItems = async (baseURL, item) => {
-
-//   // for (let i = 0; i < 10; i += 1) {
-//   //   const mealLikes = allLikes.find(
-//   //     (like) => like.item_id === item[i].id.toString()
-//   //   );
-
-//   itemsCounter(mainContent);
-//   return item;
-// };
-
-// // Showing likes count
-// // const showLikesCount = async (invoUrl) => {
-// //   const likesData = await getLike(invoUrl);
-// //   likesData.forEach((eachItemData) => {
-// //     const likesCount = [`${eachItemData.likes}`];
-// //     const likesCountElement = document.getElementById(
-// //       `likes-${eachItemData.item_id}`,
-// //     );
-// //     if (likesCountElement) {
-// //       likesCountElement.innerHTML = likesCount;
-// //     }
-// //   });
-// // };
-// // showLikesCount(involvementURL);
-// // // Send likes to server
-// // document.addEventListener('click', (e) => {
-// //   if (e.target.classList.contains('like-btn')) {
-// //     postLike(involvementURL, e.target.id);
-// //     showLikesCount();
-// //   }
-// // });
-
-// export default displayItems;
