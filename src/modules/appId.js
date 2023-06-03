@@ -1,5 +1,5 @@
 // Get app id
-// This app's appId is : oiSeMAlUvRnkkFu4p3zx
+// This app's appId is : UKP27MmenkdUVvm9H93H
 const getAppId = async () => {
   const request = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
