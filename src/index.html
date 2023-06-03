@@ -136,11 +136,27 @@
             </table>
             <!-- Comments -->
             <h3 class="text-center">
-              Comments(<span class="comments-counter">3</span>)
+              Comments(<span class="comments-counter"></span>)
             </h3>
             <div
               class="comments-container mt-3 d-flex flex-column justify-content-center align-items-center"></div>
             <!-- Comment form -->
+            <h3 class="text-center">Add a Comment</h3>
+            <form>
+              <input
+                type="text"
+                class="form-control my-2 comment-username"
+                placeholder="Username"
+                aria-label="Username"
+                aria-placeholder="Your name" />
+              <textarea
+                class="form-control my-2 comment-description"
+                aria-label="With textarea"
+                placeholder="Your insights"></textarea>
+              <button type="submit" class="btn btn-primary comment-submit-btn">
+                Comment
+              </button>
+            </form>
           </div>
         </div>
       </div>

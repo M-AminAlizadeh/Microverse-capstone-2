@@ -53,6 +53,7 @@ document.addEventListener('click', async (e) => {
               </div>`;
         });
         modalCommentsContainer.innerHTML = commentContent;
+        // comment form
       }
     });
   }
