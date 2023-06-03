@@ -5,8 +5,7 @@ import { getComments, sendComment } from './modules/comment.js';
 
 // Global variables
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 // const likelist = await getLike(involvementURL);
 
@@ -66,7 +65,7 @@ document.addEventListener('click', async (e) => {
       e.preventDefault();
       const commentNameInput = document.querySelector('.comment-username');
       const commentmessageInput = document.querySelector(
-        '.comment-description'
+        '.comment-description',
       );
       const comments = await sendComment(involvementURL, id);
       modalCommentsContainer.innerHTML = '';

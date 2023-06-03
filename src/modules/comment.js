@@ -21,6 +21,7 @@ const sendComment = async (invoLink, id) => {
     },
     body: JSON.stringify(comment),
   });
+  console.log(res);
   const comments = await getComments(invoLink, id);
   return comments;
 };

@@ -1,6 +1,4 @@
-const commentCounter = (object)=>{
-  return object.length;
-}
+const commentCounter = (object) => object.length;
 
 describe('Comments Functionality', () => {
   test('Count number of comments', () => {
