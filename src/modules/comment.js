@@ -22,6 +22,7 @@ const sendComment = async (invoLink, id) => {
     body: JSON.stringify(comment),
   });
   const data = await res.json();
+  console.log(comment)
   // Reset form
   commentNameInput.value = '';
   commentmessageInput.value = '';
