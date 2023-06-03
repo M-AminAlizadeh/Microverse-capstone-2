@@ -46,8 +46,9 @@ document.addEventListener('click', async (e) => {
         modalSummary.innerHTML = `${item.summary.slice(0, 40)}....`;
         modalWebsiteLink.innerHTML = `<a href=${item.url} target="_blank">Click here</a>`;
         // comment
-        modalCommentsCount.innerHTML = comments.length;
-        comments.forEach((comment) => {
+         modalCommentsCount.innerHTML = comments.length || 0;
+        if(comments.length > 0){
+        comments?.forEach((comment) => {
           commentContent += `
           <!-- Comment -->
               <div class="comment-container d-flex">
@@ -56,6 +57,7 @@ document.addEventListener('click', async (e) => {
                 <div class="comment-content">${comment.comment}</div>
               </div>`;
         });
+      }
         modalCommentsContainer.innerHTML = commentContent;
       }
     });
