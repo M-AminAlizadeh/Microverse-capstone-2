@@ -47,17 +47,17 @@ document.addEventListener('click', async (e) => {
         modalWebsiteLink.innerHTML = `<a href=${item.url} target="_blank">Click here</a>`;
         // comment
         modalCommentsCount.innerHTML = comments.length || 0;
-        if(comments.length > 0){
-        comments?.forEach((comment) => {
-          commentContent += `
+        if (comments.length > 0) {
+          comments.forEach((comment) => {
+            commentContent += `
           <!-- Comment -->
               <div class="comment-container d-flex">
                 <div class="comment-date me-2">${comment.creation_date}</div>
                 <div class="comment-author me-2">${comment.username}:</div>
                 <div class="comment-content">${comment.comment}</div>
               </div>`;
-        });
-      }
+          });
+        }
         modalCommentsContainer.innerHTML = commentContent;
       }
     });
