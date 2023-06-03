@@ -27,7 +27,6 @@ const modalSummary = document.querySelector('.modal-summary');
 const modalWebsiteLink = document.querySelector('.modal-website-link');
 const modalCommentsContainer = document.querySelector('.comments-container');
 const modalCommentsCount = document.querySelector('.comments-counter');
-const modalCommentBtn = document.querySelector('.comment-submit-btn');
 
 document.addEventListener('click', async (e) => {
   let id;
