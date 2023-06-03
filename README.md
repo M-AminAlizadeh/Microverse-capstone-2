@@ -103,6 +103,7 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://google.com)
+- [Video](https://drive.google.com/file/d/1hHTOu9FeVVBDGZ3-7fYT_FNeEkqHwHvy/view?usp=drive_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,16 +121,15 @@ In order to run this project you need:
  git npm start
 ```
 
-
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 ```sh
   cd my-folder
   git clone https://github.com/M-AminAlizadeh/Microverse-capstone-2.git
 ```
+
 -
 
 ### Install
@@ -155,6 +155,7 @@ To run the project, execute the following command:
 ```sh
   npm start
 ```
+
 -
 
 ### Run tests
@@ -164,15 +165,14 @@ To run tests, run the following command:
 ```sh
   npm test
 ```
--
 
+-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 
 👤 **Author1**
 
@@ -223,10 +223,8 @@ we would like to thank our morning session team member for they give us good fee
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
