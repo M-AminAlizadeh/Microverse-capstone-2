@@ -45,11 +45,11 @@ const displayItems = async (baseUrl, invoUrl) => {
             <!-- Buttons -->
             <div class="card-body d-flex justify-content-between">
               <button type="button" class="btn btn-info text-light comment-btn" data-bs-toggle="modal" width="2rem" height="2rem" id="${
-                item.id
-              }" data-bs-target="#e">Comments</button>
+  item.id
+}" data-bs-target="#e">Comments</button>
               <button type="button" class="btn btn-secondary" id="${
-                item.id
-              }">Reservation</button>
+  item.id
+}">Reservation</button>
             </div>
           </div>
         `;
@@ -70,4 +70,4 @@ const displayItems = async (baseUrl, invoUrl) => {
   return items;
 };
 
-export { displayItems };
+export default displayItems;

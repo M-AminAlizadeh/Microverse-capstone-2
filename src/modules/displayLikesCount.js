@@ -5,7 +5,7 @@ const displayLikesCount = async (invoLink) => {
   likesData.forEach((likeData) => {
     const likesCount = [`${likeData.likes}`];
     const likesCountContainer = document.querySelector(
-      `#likes-${likeData.item_id}`
+      `#likes-${likeData.item_id}`,
     );
     if (likesCountContainer) {
       likesCountContainer.innerHTML = likesCount;

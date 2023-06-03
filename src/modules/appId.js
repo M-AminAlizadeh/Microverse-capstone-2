@@ -5,8 +5,10 @@ const getAppId = async () => {
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/',
     {
       method: 'POST',
-    }
+    },
   );
   const respond = await request.json();
   return respond;
 };
+
+export default getAppId;
