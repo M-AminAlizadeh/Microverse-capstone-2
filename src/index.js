@@ -1,5 +1,5 @@
 import displayItems from './modules/displayItems.js';
-import getComments from './modules/comment.js';
+import { getComments, sendComment } from './modules/comment.js';
 import { getLike, allItems, addLikesListenerButtons } from './modules/like.js';
 
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
@@ -22,6 +22,7 @@ const modalSummary = document.querySelector('.modal-summary');
 const modalWebsiteLink = document.querySelector('.modal-website-link');
 const modalCommentsContainer = document.querySelector('.comments-container');
 const modalCommentsCount = document.querySelector('.comments-counter');
+const modalCommentBtn = document.querySelector('.comment-submit-btn');
 
 document.addEventListener('click', async (e) => {
   let id;
@@ -55,6 +56,11 @@ document.addEventListener('click', async (e) => {
         modalCommentsContainer.innerHTML = commentContent;
         // comment form
       }
+    });
+    modalCommentBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      sendComment(involvementURL, id);
+      getComments(involvementURL, id);
     });
   }
 });
