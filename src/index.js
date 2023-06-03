@@ -3,8 +3,7 @@ import { getComments, sendComment } from './modules/comment.js';
 import { getLike, allItems, addLikesListenerButtons } from './modules/like.js';
 
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 const itemLists = await allItems(baseURL);
 const likelist = await getLike(involvementURL);
@@ -23,8 +22,6 @@ const modalSummary = document.querySelector('.modal-summary');
 const modalWebsiteLink = document.querySelector('.modal-website-link');
 const modalCommentsContainer = document.querySelector('.comments-container');
 const modalCommentsCount = document.querySelector('.comments-counter');
-const modalCommentNameInput = document.querySelector('.comment-username');
-const modalCommentmessageInput = document.querySelector('.comment-description');
 const modalCommentBtn = document.querySelector('.comment-submit-btn');
 
 document.addEventListener('click', async (e) => {

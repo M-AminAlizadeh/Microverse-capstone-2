@@ -19,11 +19,14 @@ const sendComment = async (invoLink, id) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: json.stringify(comment),
+    body: JSON.stringify(comment),
   });
+  const result = res.json();
+
   // Reset form
   commentNameInput.value = '';
   commentmessageInput.value = '';
+  return result;
 };
 
 export { getComments, sendComment };
