@@ -1,0 +1,31 @@
+The text that we use in the website:
+// Home Page
++ Header
+  -- Movies and TV Shows
++ Item
+  -- likes
+  -- Comments
+  -- Reservations
++ Footer
+  -- Created by Gregito and Amin under CC license
+  -- For more info visit https://github.com/M-AminAlizadeh/Microverse-capstone-2
+
+// Comments Popup
++ Name
++ Attributes
+  -- Seasons
+  -- Cast
+  -- Director Name
+  -- Language
+  -- Genres
+  -- Initail Released
+  -- Official Site
+  -- Summary
++ Comments
+  -- Date
+  -- Name
+  -- Comment Content
++ Add a comment
+  -- Your name
+  -- Your opinion
+  -- Comment
