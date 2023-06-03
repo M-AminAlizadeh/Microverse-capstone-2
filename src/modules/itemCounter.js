@@ -1,7 +1,9 @@
-const itemsCounter = (items) => {
-  const count = items.childElementCount;
-  const itemsBtnNav = document.getElementById('items-count');
-  itemsBtnNav.innerHTML = `${count} Moves`;
+import fetchItems from './fetchItems.js';
+
+const itemsCounter = async (baseUrl) => {
+  const items = await fetchItems(baseUrl);
+  const itemCounterContainer = document.querySelector('.items-count-container');
+  itemCounterContainer.innerHTML = `${items.length}`;
 };
 
 export default itemsCounter;
