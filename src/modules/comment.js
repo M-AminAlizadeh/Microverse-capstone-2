@@ -26,6 +26,7 @@ const sendComment = async (invoLink, id) => {
   // Reset form
   commentNameInput.value = '';
   commentmessageInput.value = '';
+  
   return data;
 };
 

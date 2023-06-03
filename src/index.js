@@ -46,7 +46,7 @@ document.addEventListener('click', async (e) => {
         modalSummary.innerHTML = `${item.summary.slice(0, 40)}....`;
         modalWebsiteLink.innerHTML = `<a href=${item.url} target="_blank">Click here</a>`;
         // comment
-         modalCommentsCount.innerHTML = comments.length || 0;
+        modalCommentsCount.innerHTML = comments.length || 0;
         if(comments.length > 0){
         comments?.forEach((comment) => {
           commentContent += `
