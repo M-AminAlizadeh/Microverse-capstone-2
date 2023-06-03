@@ -5,7 +5,8 @@ import { getComments, sendComment } from './modules/comment.js';
 
 // Global variables
 const baseURL = 'https://api.tvmaze.com/shows/1/episodes';
-const involvementURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
+const involvementURL =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/';
 
 // const likelist = await getLike(involvementURL);
 
@@ -63,8 +64,28 @@ document.addEventListener('click', async (e) => {
     });
     modalCommentBtn.addEventListener('click', async (e) => {
       e.preventDefault();
-      await sendComment(involvementURL, id);
-      await getComments(involvementURL, id);
+      const commentNameInput = document.querySelector('.comment-username');
+      const commentmessageInput = document.querySelector(
+        '.comment-description'
+      );
+      const comments = await sendComment(involvementURL, id);
+      modalCommentsContainer.innerHTML = '';
+      let commentContent = '';
+      if (comments.length > 0) {
+        comments.forEach((comment) => {
+          commentContent += `
+          <!-- Comment -->
+              <div class="comment-container d-flex">
+                <div class="comment-date me-2">${comment.creation_date}</div>
+                <div class="comment-author me-2">${comment.username}:</div>
+                <div class="comment-content">${comment.comment}</div>
+              </div>`;
+        });
+      }
+      modalCommentsContainer.innerHTML = commentContent;
+      // Reset form
+      commentNameInput.value = '';
+      commentmessageInput.value = '';
     });
   }
 });
